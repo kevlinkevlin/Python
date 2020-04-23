@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys
 import numpy as np
 import pandas as pd
@@ -18,7 +19,7 @@ for month in range(12):
             sample[:,day * 24 + hour] = data[18 * (month * 20 + day): 18 * (month * 20 + day + 1),hour]
     month_to_data[month] = sample  
 
-####################Preprocess
+# Preprocess
 x = np.empty(shape = (12 * 471 , 18 * 9),dtype = float)
 y = np.empty(shape = (12 * 471 , 1),dtype = float)
 
